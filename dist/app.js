@@ -19,6 +19,18 @@ const App = (app) => {
             origin: "*",
             methods: ["GET", "POST", "PATCH", "DELETE"],
         }));
+        app.get("/", (req, res) => {
+            try {
+                return res.status(200).json({
+                    message: "Welcome",
+                });
+            }
+            catch (error) {
+                return res.status(400).json({
+                    message: `app route error:${error}`,
+                });
+            }
+        });
     }
     catch (error) {
         console.log(`Application Error: ${error}`);
