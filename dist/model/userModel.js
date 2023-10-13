@@ -39,12 +39,12 @@ const userSchema = new mongoose_1.Schema({
     password: {
         type: String,
     },
-    avatar: {
-        type: String,
-    },
-    avatarID: {
-        type: String,
-    },
+    // avatar: {
+    //   type: String,
+    // },
+    // avatarID: {
+    //   type: String,
+    // },
     todos: [
         {
             type: mongoose_1.default.Types.ObjectId,

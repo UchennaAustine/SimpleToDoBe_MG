@@ -13,14 +13,14 @@ export const createUser = async (
     const lock = await bcrypt.genSalt(10);
     const encrypt = await bcrypt.hash(password, lock);
 
-    const { secure_url, public_id }: any = streamUpload(req);
+    // const { secure_url, public_id }: any = streamUpload(req);
 
     const User = await userModel.create({
       email,
       name,
       password: encrypt,
-      avatar: secure_url,
-      avatarID: public_id,
+      // avatar: secure_url,
+      // avatarID: public_id,
     });
 
     return res.status(201).json({
