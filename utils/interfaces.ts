@@ -4,8 +4,8 @@ export interface iUser {
   email: string;
   password: string;
   name: string;
-  avatar: string;
-  avatarID: string;
+  // avatar: string;
+  // avatarID: string;
   todos: {}[];
   doneTodos: {}[];
 }

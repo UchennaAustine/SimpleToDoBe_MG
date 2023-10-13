@@ -17,12 +17,12 @@ const userSchema = new Schema<iUserData>(
       type: String,
     },
 
-    avatar: {
-      type: String,
-    },
-    avatarID: {
-      type: String,
-    },
+    // avatar: {
+    //   type: String,
+    // },
+    // avatarID: {
+    //   type: String,
+    // },
     todos: [
       {
         type: mongoose.Types.ObjectId,

@@ -6,12 +6,12 @@ import {
   signInUser,
   updateUserDetails,
 } from "../controller/userController";
-import multer from "multer";
+// import multer from "multer";
 
 const router = express.Router();
-const uploading = multer().single("avatar");
+// const uploading = multer().single("avatar");
 
-router.route("/register").post(uploading, createUser);
+router.route("/register").post(createUser);
 router.route("/sign-in").post(signInUser);
 router.route("/view-all").get(getAllUsers);
 router.route("/:UserID/view-one").get(getAUser);
